@@ -6,11 +6,12 @@ img_alt: Page de connection sur le site de l'appli Myprint
 description: |
   J'ai conçu et développé pour le compte d'une communauté urbaine dans le Nord de la France, le projet CUIB mettant en place un systéme informatique permettant la gestion de l'ensemble des médiathèques de son territoire qui sont au nombre de 5.(Demo en dessous) 
 tags:
-  - Conception BDD
   - JavaFX
   - Quarkus
   - Scene Builder
 ---
+
+<div class="container-project ">
 >Demo de l'application CUIB-Mediatek
 
 <div>
@@ -63,7 +64,7 @@ Dans le cadre de ce projet, j'ai utilisé les technologies suivantes :
 <h6 class="text-center ">interface utilisateur pour modifier un article</h6>
 
 > Exemple d'une requête SQL écrite dans le courant de ce projet pour pouvoir récupèrer tous les articles stockés dans la base de données : 
-<div class="fw-bold">
+<div class="container-code fw-bold">
 @Override</br>
 public ArrayList&lt;Article&gt getAll()</br> 
      {</br>
@@ -95,8 +96,23 @@ public ArrayList&lt;Article&gt getAll()</br>
         return liste;</br>
 }</br>
 
-
+</div>
 
 </div>
 
+<style>
 
+    @media (max-width: 400px) {
+    .container-project {
+      max-width: 330px;
+    }
+  }
+
+  @media (max-width: 350px) {
+    .container-code {
+      padding : 0;
+      overflow: hidden;
+    }
+  }
+
+</style>

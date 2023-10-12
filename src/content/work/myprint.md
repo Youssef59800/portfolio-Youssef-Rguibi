@@ -7,11 +7,10 @@ description: |
   J’ai collaboré à la création et à la réalisation du projet MyPrint. Ce projet consistait en la création d’une application Web permettant l’impression en ligne d’un rapport de stage, thèse, catalogue, flyers…. Et avoir la possibilité soit de se faire livrer à l’adresse souhaitée ou bien faire un retrait directement chez l’imprimeur.(Demo de l'appli en bas de page)
 tags:
   - Spring boot
-  - Spring
   - Maven
   - Angular
 ---
-
+<div class="container-project ">
 Pour la réalisation de ce projet, on a utilisé spring Boot qui est un Framework de développement JAVA pour générer un projet avec tous les CRUD et aussi pour assurer la sécurité de l’application. Le choix de système de base de données s’est porté sur PostgreSQL. Finalement, pour la partie Front-end le choix de l’équipe en concertation avec le client s’est porté sur le Framework Angular.
 
 Les différentes technologies utilisées sont les suivantes :
@@ -39,7 +38,7 @@ Dans la classe WebSecurityConfig on a défini la fonction SecurityFilterChain ()
 
 Le résultat de cette configuration est la suivante :
 
-<div style="font-weight: bold; padding: 20px; border: 1px solid gray;border-radius:10px">
+<div class="container-code" style="font-weight: bold; padding: 20px; border: 1px solid gray;border-radius:10px">
 @Bean</br>
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {</br>
         http</br>
@@ -98,5 +97,19 @@ Le choix d’utiliser Angular comme Framework pour développer le Front-end de n
      <video src="/assets/videos/demo-myprint.mp4" width=100% height=100% autoplay loop ></video>
 </div>
 
+</div>
 
+<style>
+
+  @media (max-width: 400px) {
+    .container-project {
+      max-width: 330px;
+    }
+    .container-code {
+      padding : 0;
+      overflow: hidden;
+    }
+  }
+
+</style>  
 

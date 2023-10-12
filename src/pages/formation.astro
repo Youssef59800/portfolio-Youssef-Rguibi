@@ -12,40 +12,40 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 	<div class="table">
 		<div class="table-header">
 			<div class="header__item"><a id="name" class="filter__link" href="#">Intitulé du diplôme / certification</a></div>
-			<div class="header__item"><a id="wins" class="filter__link filter__link--number" href="#">Pays/Ville</a></div>
+			<div class="header__item col-pays"><a id="wins" class="filter__link filter__link--number" href="#">Pays/Ville</a></div>
             <div class="header__item"><a id="wins" class="filter__link filter__link--number" href="#">Université / Centre</a></div>
 			<div class="header__item"><a id="draws" class="filter__link filter__link--number" href="#">Date</a></div>
-			<div class="header__item"><a id="losses" class="filter__link filter__link--number" href="#">Status</a></div>
+			<div class="header__item col-status"><a id="losses" class="filter__link filter__link--number" href="#">Status</a></div>
 		
 		</div>
 		<div class="table-content">	
 			<div class="table-row">		
 				<div class="table-data">Concepteur développeur d'application</div>
-				<div class="table-data">France / Lille</div>
+				<div class="table-data col-pays">France / Lille</div>
 				<div class="table-data">AFPA</div>
 				<div class="table-data">05/2022 - 05/2023</div>
-                <div class="table-data">Obtenu</div>
+                <div class="table-data col-status">Obtenu</div>
 			</div>
 			<div class="table-row">		
 				<div class="table-data">MS développement JAVA J2EE.Net</div>
-				<div class="table-data">France / Lille</div>
+				<div class="table-data col-pays">France / Lille</div>
 				<div class="table-data">AFPA</div>
 				<div class="table-data">03/2022 - 05/2022</div>
-                <div class="table-data">Obtenu</div>
+                <div class="table-data col-status">Obtenu</div>
 			</div>
 			<div class="table-row">		
 				<div class="table-data">Master en automatique et génie électrique</div>
-				<div class="table-data">France / Marseille</div>
+				<div class="table-data col-pays">France / Marseille</div>
 				<div class="table-data">UNIVERSITÉ AIX-MARSEILLE 3</div>
 				<div class="table-data">2007 - 2009</div>
-                <div class="table-data">Obtenu</div>
+                <div class="table-data col-status">Obtenu</div>
 			</div>
             <div class="table-row">		
 				<div class="table-data">Licence électronique - informatique</div>
-				<div class="table-data">France / Marseille</div>
+				<div class="table-data col-pays">France / Marseille</div>
 				<div class="table-data">UNIVERSITÉ AIX-MARSEILLE 3</div>
 				<div class="table-data">2003 - 2007</div>
-                <div class="table-data">Obtenu</div>
+                <div class="table-data col-status">Obtenu</div>
 			</div>
             
 		</div>	
@@ -149,4 +149,18 @@ h1,h2,h3,h4,h5,h6 {
 	}
 	
 }
+
+@media (max-width: 50em) {
+        .col-status {
+            display: none;
+        }
+    }
+
+	@media (max-width: 40em) {
+        .col-pays {
+            display: none;
+        }
+    }
+
+
 </style>

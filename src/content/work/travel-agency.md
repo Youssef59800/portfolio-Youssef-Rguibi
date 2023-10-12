@@ -7,8 +7,6 @@ description: |
   J'ai conçu et développé pour le compte d'une agence de voyage, une application web permettant à l'agence de proposer ses différents service et offres.(demo disponible en dessous)
 tags:
   - Spring boot
-  - Spring
-  - Maven
   - Angular
   - Oauth2.0
 ---
