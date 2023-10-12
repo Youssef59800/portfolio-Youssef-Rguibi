@@ -1,0 +1,116 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+---
+
+<BaseLayout title="About | Youssef Rguibi" description="About Youssef Rguibi">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="À propos de moi"
+				tagline="Merci de votre visite. Lisez ci-dessous pour en savoir un peu plus sur moi et mon parcours."
+			>
+				<img
+					width="1553"
+					height="873"
+					src="/assets/profil-portfolio.png"
+					alt="Youssef Rguibi at work"
+				/>
+			</Hero>
+
+			<section>
+				<h2 class="section-title">Titre</h2>
+				<div class="content">
+					<p>
+						Transition de cadre expérimenté à développeur junior
+					</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Parcours professionnel antérieur :</h2>
+				<div class="content">
+					<p>J'ai entamé mon parcours universitaire avec une licence en électronique-informatique à l'Université Aix-Marseille 3. Après avoir obtenu ce diplôme, j'ai poursuivi mes études en obtenant un Master en génie électrique et automatique. Mon parcours académique m'a fourni une solide base de connaissances en électronique et en informatique.</br></br>
+
+						Ma carrière professionnelle a débuté avec un poste au sein du service de maintenance des équipements électroniques de la SNCF, où j'ai acquis une précieuse expérience pendant un an. Par la suite, j'ai intégré un bureau d'études en recherche et développement au sein de la société VALEO. Mon rôle consistait à contribuer à l'innovation technologique et à la conception de solutions électroniques avancées.</br></br>
+						
+						Une expérience qui a marqué ma carrière a été mon passage en tant qu'enseignant de technologie au sein d'un collège situé dans le nord de la France. J'ai eu l'opportunité d'enseigner à des élèves déficients visuels, une expérience inoubliable qui m'a apporté de précieuses leçons de vie, et m'a permis de collaborer avec de véritables héros du quotidien.</br></br>
+						
+						Après un an d'enseignement, j'ai choisi de rejoindre l'équipe de la société NC Transport en tant que chef d'exploitation. J'ai occupé ce poste avec succès jusqu'à l'arrivée de la pandémie de COVID-19, qui a suscité en moi le désir de relever un nouveau défi dans un domaine qui a toujours suscité ma passion. J'ai donc décidé de me lancer dans une formation intensive de 18 mois pour devenir Concepteur Développeur d'Applications, en collaborant avec l'organisme de formation AFPA de Lille.</br></br>
+						
+						Ce changement de cap représente pour moi une opportunité excitante de combiner mes compétences techniques antérieures avec ma nouvelle expertise en développement d'applications, et de contribuer de manière significative à l'industrie informatique. J'ai hâte de mettre en pratique ces connaissances dans ma prochaine étape professionnelle.
+					</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Objectifs futurs :</h2>
+				<div class="content">
+					<p>Mon aventure dans le monde du développement informatique est une quête passionnante et en constante évolution. Mon objectif est de devenir un développeur exceptionnel, de continuer à apprendre et à innover dans un domaine qui m'inspire profondément.</br></br>
+
+						Je m'efforce de créer des applications qui résolvent des problèmes concrets, qui améliorent la vie des gens et qui ouvrent de nouvelles possibilités. Mon ambition est de devenir un expert dans les technologies émergentes, de contribuer à des projets novateurs et de repousser les limites de la créativité technologique.</p>
+				</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>
